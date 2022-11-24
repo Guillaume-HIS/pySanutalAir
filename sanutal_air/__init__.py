@@ -79,13 +79,13 @@ class Ventilation(object):
         if self._state == "unknown":
             self.update()
         if self._state == "on":
-            self.set_level(0)
+            self.set_level(1)
             self._state = "off"
         self.update()
 
     def set_level(self, level):
         try:
-            ret = requests.post("http://" + self._host + "/upload/" + str(level), data="B" + str(level), timeout=5)
+            ret = requests.post("http://" + self._host + "/upload/B" + str(level), data="B" + str(level), timeout=5)
         except requests.Timeout:
             return 1
         if ret.status_code == 200:
