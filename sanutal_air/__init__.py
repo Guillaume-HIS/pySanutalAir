@@ -21,8 +21,8 @@ class Ventilation(object):
             return 1
         if ret.status_code != 200:
             return 1
-        self.fetch_speed(self, ret)
-        self.fetch_frost_filter(self, ret)
+        self.fetch_speed(ret)
+        self.fetch_frost_filter(ret)
         return 0
     
     def fetch_speed(self, req_get):
