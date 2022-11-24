@@ -59,3 +59,27 @@ class Ventilation(object):
             self._filter_reset = False
         else:
             self._filter_reset = True
+
+    @property
+    def name(self):
+        return self._name
+    
+    @property
+    def host(self):
+        return self._host
+    
+    @property
+    def state(self):
+        return self._state
+    
+    @property
+    def speed(self):
+        return self._speed
+    
+    @property
+    def frost_active(self):
+        return self._frost_active
+    
+    @property
+    def filter_reset(self):
+        return self._filter_reset
