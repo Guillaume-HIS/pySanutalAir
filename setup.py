@@ -8,7 +8,7 @@ with open("README.md", 'r') as fp:
 setup(
     name = "pySanutalAir",
     packages = ["sanutal_air"],
-    version="0.1.3",
+    version="0.1.4",
     description="Python3 library for home ventilation system from Sanutal",
     long_description=long_description,
     python_requires='>=3.6.7',
