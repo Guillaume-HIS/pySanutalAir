@@ -107,9 +107,8 @@ class Ventilation(object):
         """Set the speed of the fan, as a percentage."""
         if speed == 100:
             self.set_level(4)
-        if self._level != 3:
-            self.set_level(3)
         self.set_l3_speed(speed)
+        self.set_level(3)
     
     @property
     def name(self):
