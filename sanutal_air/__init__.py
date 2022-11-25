@@ -107,6 +107,7 @@ class Ventilation(object):
         """Set the speed of the fan, as a percentage."""
         if speed == 100:
             self.set_level(4)
+            return
         self.set_l3_speed(speed)
         self.set_level(3)
     
