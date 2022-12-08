@@ -39,7 +39,8 @@ class Ventilation(object):
         
         if self._level == 4 :
             self._state = "on"
-            return 100
+            self._speed = 100
+            return
 
         substring = f"document.getElementById(\"R{self._level}\").value="
         speed_index = req_get.text.rfind(substring)
