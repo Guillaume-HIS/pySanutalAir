@@ -16,7 +16,7 @@ class Ventilation(object):
     
     def update(self):
         try:
-            ret = requests.get("http://" + self._host + "/")
+            ret = requests.get("http://" + self._host + "/", timeout=5)
         except requests.Timeout:
             return 1
         if ret.status_code != 200:
@@ -110,6 +110,7 @@ class Ventilation(object):
             return
         self.set_l3_speed(speed)
         self.set_level(3)
+        self.update()
     
     @property
     def name(self):
