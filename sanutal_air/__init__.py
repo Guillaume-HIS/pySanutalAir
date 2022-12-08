@@ -37,7 +37,9 @@ class Ventilation(object):
         if "B4" in req_get.text[-130:]:
             self._level = 4
         
-        if self._level == 4 : return 100
+        if self._level == 4 :
+            self._state = "on"
+            return 100
 
         substring = f"document.getElementById(\"R{self._level}\").value="
         speed_index = req_get.text.rfind(substring)
@@ -107,6 +109,7 @@ class Ventilation(object):
         """Set the speed of the fan, as a percentage."""
         if speed == 100:
             self.set_level(4)
+            self.update()
             return
         self.set_l3_speed(speed)
         self.set_level(3)
