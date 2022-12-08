@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: pySanutalAir
+Version: 0.1.7
+Summary: Python3 library for home ventilation system from Sanutal
+Author: Guillaume-HIS
+License: MIT
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Home Automation
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6.7
+License-File: LICENSE
+
+# pySanutalAir
+Python3 library to control home ventilation systems from Sanutal, AIR 2/3/4/5
+
+## Intended use
+Intended to be used through Home Assistant
